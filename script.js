@@ -7,14 +7,19 @@ let timeline = gsap.timeline({
         duration: 12,
         ease: "power1.inOut"
     }
+}).set("#hand", {
+    xPercent: -26,
+    yPercent: -6
+    // transformOrigin: "50% 50%"
 }).to("#hand", {
     motionPath: {
         path: "#path",
         align: "#path",
-        alignOrigin: [0.28, 0.08]
+        alignOrigin: [0.5, 0.5]
     }
 }).to("#path", {
-        strokeDasharray: "4096, " + "0"
+        // strokeDasharray: (black line, white line)
+        strokeDasharray: "4046, " + "0"
     }, "<"
 );
 
